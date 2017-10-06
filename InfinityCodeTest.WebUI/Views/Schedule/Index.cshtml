@@ -1,0 +1,12 @@
+﻿@model InfinityCodeTest.WebUI.Models.DeliveryScheduleViewModel
+@{
+    ViewBag.Title = "Delivery Schedule List";
+}
+<div class="page-header">
+    <h1>Schedule of Deliveries</h1>
+</div>
+
+@foreach (var d in Model.Deliveries)
+{
+    @Html.Partial("_DeliverySummary", d)
+}

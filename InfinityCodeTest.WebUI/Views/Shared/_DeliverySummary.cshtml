@@ -1,0 +1,56 @@
+﻿@model InfinityCodeTest.Domain.Entities.Delivery
+<div  class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-target="#collapse@(Model.ID)" href="#collapse@(Model.ID)">Delivery #@Model.ID</a>
+        </h4>
+    </div>
+    <div id="collapse@(Model.ID)" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="row">
+                <label class="col-sm-2 control-label">@Html.DisplayNameFor(Model => Model.DepartureTime)</label>
+
+                <div class="col-sm-10">
+                    @Model.DepartureTime
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-2 control-label">@Html.DisplayNameFor(Model => Model.DestinationMileage)</label>
+
+                <div class="col-sm-10">
+                    @Model.DestinationMileage
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-2 control-label">@Html.DisplayNameFor(Model => Model.DevileryTime)</label>
+
+                <div class="col-sm-10">
+                    @Model.DevileryTime
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-2 control-label">@Html.DisplayNameFor(Model => Model.TrackingNumber)</label>
+
+                <div class="col-sm-10">
+                    @Model.TrackingNumber
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-sm-2 control-label">&nbsp;</label>
+                <div class="col-sm-10">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Vehicles</h3>
+                        </div>
+                        <div class="panel-body">
+                            @foreach (var v in Model.Vehicles)
+                            {
+                                @Html.Partial("_VehicleSummary", v)
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
