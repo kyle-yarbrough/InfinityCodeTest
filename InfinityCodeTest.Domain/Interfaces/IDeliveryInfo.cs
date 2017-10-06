@@ -10,17 +10,17 @@ namespace InfinityCodeTest.Domain.Interfaces
     //Design parameters require at least 1 interface so we will create a Delivery Interface
     public interface IDeliveryInfo
     {
-        //Begin Properties
+        #region Properties
         int ID { get; }
         decimal DepartureTime { get;  }
         decimal DestinationMileage { get; }
         decimal DevileryTime { get; }
         string TrackingNumber { get; }
         Vehicle[] Vehicles { get; }
-        //End Properties
+        #endregion
 
-        //Begin Method Signatures
+        #region Method Signatures
 
-        //End Method Signatures
+        #endregion
     }
 }

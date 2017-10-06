@@ -12,6 +12,8 @@ namespace InfinityCodeTest.WebUI.Helper
     {
         public static Delivery[] GenerateDeliveryData()
         {
+            //create a variable to hold the current Vehicle ID to be used
+            int vehicleID = 1;
             //create the random variable for usage in the data creation(minimum of 5 to max of 10)
             Random random = new Random();
             int randomNumberOfDeliveries = random.Next(5, 10);
@@ -30,7 +32,7 @@ namespace InfinityCodeTest.WebUI.Helper
                 //PickupTruck
                 vehicle[0] = new PickupTruck
                 {
-                    ID = 1,
+                    ID = vehicleID++,
                     AverageMilesPerHour = random.Next(50, 80),
                     FuelGallonStorage = random.Next(1, 50),
                     LicensePlateNumber = random.Next(10000, 999999).ToString(), //For simplicity the license plat will be all numerical instead of alphnumerical
@@ -42,7 +44,7 @@ namespace InfinityCodeTest.WebUI.Helper
                 //Van
                 vehicle[1] = new Van
                 {
-                    ID = 2,
+                    ID = vehicleID++,
                     AverageMilesPerHour = random.Next(50, 80),
                     FuelGallonStorage = random.Next(1, 50),
                     LicensePlateNumber = random.Next(10000, 999999).ToString(), //For simplicity the license plat will be all numerical instead of alphnumerical
@@ -57,7 +59,7 @@ namespace InfinityCodeTest.WebUI.Helper
                     //BigRig
                     vehicle[2] = new BigRig
                     {
-                        ID = 3,
+                        ID = vehicleID++,
                         AverageMilesPerHour = random.Next(50, 80),
                         FuelGallonStorage = random.Next(1, 50),
                         LicensePlateNumber = random.Next(10000, 999999).ToString(), //For simplicity the license plat will be all numerical instead of alphnumerical

@@ -9,14 +9,14 @@ namespace InfinityCodeTest.Domain.Entities
 {
     public class PickupTruck : Vehicle
     {
-        //Begin Public Properties
-        //End Public Properties
+        #region Private Properties
+        #endregion
 
-        //Begin Public Methods
-       public PickupTruck()
+        #region Public Methods
+        public PickupTruck()
         {
             VehicleType = "Pickup Truck";
         }
-        //End PublicMethods
+        #endregion
     }
 }

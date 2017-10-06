@@ -10,16 +10,16 @@ namespace InfinityCodeTest.Domain.Entities
 {
     public class Delivery : IDeliveryInfo
     {
-        //BEGIN Private Properties
+        #region Private Properties
         private int deliveryID;
         private string trackingNumber;
         private decimal depatureTime;
         private decimal destinationMileage;
         private decimal deliveryTime;
         private Vehicle[] vehicles;
-        //END Private Properties
+        #endregion
 
-        //BEGIN Public Properties
+        #region Public Properties
         public int ID { get { return deliveryID; } }
         [Display(Name = "Departure Time")]
         public decimal DepartureTime { get { return depatureTime; }}
@@ -30,9 +30,9 @@ namespace InfinityCodeTest.Domain.Entities
         [Display(Name = "Tracking Number")]
         public string TrackingNumber { get { return trackingNumber; } }
         public Vehicle[] Vehicles { get { return vehicles; } }
-        //END Public Properties
+        #endregion 
 
-        //BEGIN Public Methods
+        #region Public Methods
         //Constructor to force required fields to be populated for other calculations.
         public Delivery(int DeliveryID,decimal DepartureTime, decimal DestinationMileage, Vehicle[] Vehicles)
         {
@@ -49,9 +49,9 @@ namespace InfinityCodeTest.Domain.Entities
             CalculateDeliveryTime();
 
         }
-        //END Public Methods
+        #endregion
 
-        //BEGIN Private Methods
+        #region Private Methods
         //Method that will calculate the Deilivery Time using the information sent into the Constructor
         private void CalculateDeliveryTime()
         {
@@ -70,6 +70,6 @@ namespace InfinityCodeTest.Domain.Entities
         {
             trackingNumber = Guid.NewGuid().ToString();
         }
-        //END Private Methods
+        #endregion
     }
 }

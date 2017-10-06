@@ -10,7 +10,7 @@ namespace InfinityCodeTest.Domain.Entities
     //Design parameters require at least 1 abstract class so we will create a Vehicle class that is abstract
     public abstract class Vehicle
     {
-        //Begin Public Properties
+        #region Private Properties
         public int ID { get; set; }
         [Display(Name = "Average Miles Per Hour")]
         public decimal AverageMilesPerHour { get; set; }
@@ -26,9 +26,9 @@ namespace InfinityCodeTest.Domain.Entities
         public decimal StorageCapacity { get; set; }
         [Display(Name = "Vehicle Type")]
         public string VehicleType { get; set; }
-        //End Public Properties
+        #endregion
 
-        //Begin Public Methods
+        #region Private Properties
         public decimal CalculateDeliveryTime(decimal MileageToDestination)
         {
             return MileageToDestination / AverageMilesPerHour;
@@ -43,6 +43,6 @@ namespace InfinityCodeTest.Domain.Entities
         {
             return Math.Round(Mileage / this.AverageMilesPerHour, 2);
         }
-        //End Public Methods
+        #endregion
     }
 }
