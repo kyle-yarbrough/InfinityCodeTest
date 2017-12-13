@@ -9,5 +9,7 @@ namespace InfinityCodeTest.WebUI.Models
     public class DeliveryScheduleViewModel
     {
         public Delivery[] Deliveries { get; set; }
+
+        //Feature comment test
     }
 }
